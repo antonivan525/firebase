@@ -16,6 +16,8 @@ struct Sweet {
     let addedByUser:String!
     let itemRef:FIRDatabaseReference?
     
+    
+    
     init(content:String, addedByUser:String, key:String = "") {
         self.key = key
         self.content = content
@@ -24,6 +26,7 @@ struct Sweet {
     }
     
     init(snapshot:FIRDataSnapshot) {
+        
         key = snapshot.key
         itemRef = snapshot.ref
         
